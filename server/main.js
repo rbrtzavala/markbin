@@ -6,7 +6,7 @@ Meteor.startup(() => {
     return Bins.find({ ownerId: this.userId });
   });
 
-  Meteor.publish('sharedBin', function() {
+  Meteor.publish('sharedBins', function() {
     const user = Meteor.users.findOne(this.userId);
 
     if (!user) { return; }
